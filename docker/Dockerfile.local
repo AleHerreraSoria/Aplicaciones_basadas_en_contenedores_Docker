@@ -1,0 +1,24 @@
+FROM python:3.11-slim
+
+# Evita que Python genere archivos .pyc y permite ver logs en tiempo real
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# Primero las dependencias (Capa pesada que cambia poco)
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Luego el código (Capa liviana que cambia mucho)
+COPY src/ ./src/
+COPY data/ ./data/
+COPY main.py .
+
+# Configuraciones de entorno
+ENV RUNENV=local
+ENV PORT=80
+
+EXPOSE 80
+
+CMD ["python", "main.py"]

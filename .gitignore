@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Docker & Bases de Datos (Crucial para un Data Engineer)
+postgres_data/
+data/*.db
+data/*.sqlite
+.vscode/
