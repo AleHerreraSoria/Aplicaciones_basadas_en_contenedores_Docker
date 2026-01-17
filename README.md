@@ -56,11 +56,11 @@ A continuación, documento los retos técnicos enfrentados durante el desarrollo
 **Dashboard de Docker Desktop**: Se vean ambos contenedores (`log-analyzer` y `postgres`) en verde.
 **Objetivo**: Mostrar la orquestación funcionando.
 
-![img](img\orquestacion_funcionando.png)
+![img](img/orquestacion_funcionando.png)
 
 **Prueba de Persistencia:** La captura de mi explorador de archivos mostrando la carpeta `postgres_data` creada automáticamente en mi SO tras el `up`..
 **Objetivo**: Muestra como Docker escribe en el disco físico.
-![img](img\prueba_de_Persistencia.png)
+![img](img/prueba_de_Persistencia.png)
 
 ---
 
