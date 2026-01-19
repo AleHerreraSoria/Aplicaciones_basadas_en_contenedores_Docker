@@ -51,6 +51,16 @@ A continuación, documento los retos técnicos enfrentados durante el desarrollo
 
 ---
 
+## 🎓 Skills Acquired & Technical Competencies
+
+Durante el desarrollo de este proyecto, se han consolidado competencias clave de la ingeniería de datos tales como:
+
+* **Arquitectura de Contenedores:** Diseño y construcción de imágenes optimizadas utilizando `Dockerfile` y gestión de entornos multi-contenedor con `Docker Compose`.
+* **Gestión de Infraestructura de Datos:** Configuración de persistencia mediante volúmenes y orquestación de redes internas para la comunicación segura entre microservicios.
+* **Resolución de Problemas de Red (Troubleshooting):** Implementación de re-mapeo de puertos dinámicos para evitar conflictos en entornos locales de desarrollo.
+* **Interoperabilidad de Bases de Datos:** Manejo simultáneo de motores relacionales (PostgreSQL) y locales (SQLite), asegurando la integridad de los datos en sistemas efímeros.
+* **Documentación de Ingeniería:** Elaboración de manuales técnicos y bitácoras de errores, fundamentales para el trabajo en equipos ágiles y entornos de producción.
+
 ## 📸 Evidencias Documentales (Capturas)
 
 **Dashboard de Docker Desktop**: Se vean ambos contenedores (`log-analyzer` y `postgres`) en verde.
@@ -61,6 +71,14 @@ A continuación, documento los retos técnicos enfrentados durante el desarrollo
 **Prueba de Persistencia:** La captura de mi explorador de archivos mostrando la carpeta `postgres_data` creada automáticamente en mi SO tras el `up`..
 **Objetivo**: Muestra como Docker escribe en el disco físico.
 ![img](img/prueba_de_Persistencia.png)
+
+### **DBeaver:**
+
+**Conexión exitosa**: El mensaje de "Éxito" al ejecutar la consulta demuestra que el re-mapeo al puerto 5435 fue la solución definitiva para evitar conflictos con servicios locales.
+
+**Observación de Ingeniero**: Notarás que el resultado de la consulta para ver las tablas está vacío. Esto es totalmente normal en este punto de la cursada, ya que tu script de Python está configurado para usar SQLite (logs.db) como almacenamiento primario. La base de datos Postgres está lista en la infraestructura para cuando decidas migrar los datos del entorno local al relacional.
+
+![img](img/dbeaver.png)
 
 ---
 
